@@ -1,0 +1,20 @@
+{
+  "cSpell.words": [
+    "addons",
+    "config",
+    "create",
+    "database",
+    "dev",
+    "get",
+    "heroku",
+    "heroku addons create postgresql hobby dev config set pgsslmode require get database url",
+    "hobby",
+    "pgsslmode",
+    "postgresql",
+    "require",
+    "set",
+    "signin",
+    "url",
+    "varchar"
+  ]
+}
