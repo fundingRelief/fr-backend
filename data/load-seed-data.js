@@ -1,8 +1,5 @@
 const client = require('../lib/client');
-// import our seed data:
-// const animals = require('./animals.js');
-// const usersData = require('./users.js');
-// const data = require('./data.json')
+const data = require('./data.json');
 const { getEmoji } = require('../lib/emoji.js');
 
 run();
@@ -11,28 +8,26 @@ async function run() {
   try {
     await client.connect();
 
-    // const users = await Promise.all(
-    //   usersData.map(user => {
-    //     return client.query(`
-    //                   INSERT INTO users (email, hash)
-    //                   VALUES ($1, $2)
-    //                   RETURNING *;
-    //               `,
-    //     [user.email, user.hash]);
-    //   })
-    // );
-
-    // const user = users[0].rows[0];
-
-    // await Promise.all(
-    //   data.map(campaign => {
-    //     return client.query(`
-    //                 INSERT INTO campaigns (name, cool_factor, owner_id)
-    //                 VALUES ($1, $2, $3);
-    //             `,
-    //     [animal.name, animal.cool_factor, user.id]);
-    //   })
-    // );
+    await Promise.all(
+      data.map((campaign) => {
+        return client.query(
+          `
+                    INSERT INTO campaigns (campaign_name, current_amount, goal, percentage, donors, img_url, link_url, description)
+                    VALUES ($1, $2, $3, $4, $5, $6, $7, $8);
+                `,
+          [
+            campaign.campaign_name,
+            campaign.current_amount,
+            campaign.goal,
+            campaign.percentage,
+            campaign.donors,
+            campaign.img_url,
+            campaign.link_url,
+            campaign.description,
+          ]
+        );
+      })
+    );
 
     console.log('seed data load complete', getEmoji(), getEmoji(), getEmoji());
   } catch (err) {
