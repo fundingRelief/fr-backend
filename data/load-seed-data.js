@@ -1,6 +1,5 @@
 const client = require('../lib/client');
 const data = require('./data.json');
-const { getEmoji } = require('../lib/emoji.js');
 
 run();
 
@@ -29,7 +28,7 @@ async function run() {
       })
     );
 
-    console.log('seed data load complete', getEmoji(), getEmoji(), getEmoji());
+    console.log('seed data load complete');
   } catch (err) {
     console.log(err);
   } finally {

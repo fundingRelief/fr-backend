@@ -1,5 +1,4 @@
 const client = require('../lib/client');
-const { getEmoji } = require('../lib/emoji.js');
 
 run();
 
@@ -20,7 +19,7 @@ async function run() {
             );
         `);
 
-    console.log('create tables complete', getEmoji(), getEmoji(), getEmoji());
+    console.log('create tables complete');
   } catch (err) {
     console.log(err);
   } finally {
