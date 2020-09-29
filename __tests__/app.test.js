@@ -8,57 +8,54 @@ const client = require('../lib/client');
 
 describe('app routes', () => {
   describe('routes', () => {
-    let token;
-  
-    beforeAll(async done => {
+    beforeAll((done) => {
       execSync('npm run setup-db');
-  
+
       client.connect();
-  
-      const signInData = await fakeRequest(app)
-        .post('/auth/signup')
-        .send({
-          email: 'jon@user.com',
-          password: '1234'
-        });
-      
-      token = signInData.body.token;
-  
+
       return done();
     });
-  
-    afterAll(done => {
+
+    afterAll((done) => {
       return client.end(done);
     });
 
-  test('returns animals', async() => {
+    test('returns campaigns', async () => {
+      const expectation = [
+        {
+          id: 1,
+          campaign_name: 'Our parents lost their home to the Almeda fire',
+          current_amount: '$944',
+          goal: '$5000',
+          percentage: '18.8%',
+          donors: 18,
+          img_url:
+            'https://d2g8igdw686xgo.cloudfront.net/51544330_1601348243982129_r.jpeg',
+          link_url: 'https://gf.me/u/y2z2h8',
+          description:
+            'On September 8th our parents and many other families lost their home in Phoenix, Oregon. Our parents lost their place to relax and escape to after work. We as a family lost the place we knew we could walk right in without knocking and raid the fridge. The place where my boys would go to and run around in the backyard and play with Paco our family dog. The place where my brother would come back home to every summer after teaching in Oklahoma as teacher for Teach for America. The place where my sister would come home to when she would get homesick or just need a break from being a student at Portland State University. We decided to start this GoFundMe for our parents who have sacrificed for us their entire lives, they always put our needs ahead of theirs even to this day even after losing their home. We hope that we can do our part for them now. Thank you.',
+        },
+        {
+          id: 2,
+          campaign_name: 'Almeda Fire Relief - Sandy Wright needs a home',
+          current_amount: '$3,750',
+          goal: '$89,000',
+          percentage: '4.2%',
+          donors: 22,
+          img_url:
+            'https://d2g8igdw686xgo.cloudfront.net/51217170_1600121890775493_r.jpeg',
+          link_url: 'https://gf.me/u/yy2gjz',
+          description:
+            "On September 8th, 2020, my mother, Sandy Wright, lost her home and all of its contents in the Almeda Fire in Phoenix, Oregon. She was a resident of Bear Lake Estates 55+ Mobile Home Park, moving there after the death of my father in 2015. Mom fled from her home of four years with only the clothes she was wearing, her dogs, her medications, and her car.  We, her children, grandchildren, and friends, are asking for your help to get Mom into a new housing situation.  Sandy is a widow living on Social Security benefits and a very small pension from her late husband. Much of her income goes toward her medical insurance, medications and housing costs. Sandy cannot afford to buy a new, or even used, mobile home on her own, let alone furnish it. The insurance company found a way to not pay.  Everything from the life she shared with her late husband, retired Medford  Police Detective Bob Wright, has burned, including his service uniform and funeral flag.  Sandy also lost her mother's  and grandmother's diaries and recipes, her mother's wedding dress and family photos dating back over 100 years.  She is currently staying with her daughter and son-in-law near Seattle until a housing solution can be found. Sandy's children and grandchildren are doing everything that they can to help her financially. Although it's a good start, it will not be enough. Sandy is looking to buy an inexpensive, smaller mobile home trailer either in a safe park or on a small lot. Sandy will need to furnish it completely, from beds and linens, to dishes and glasses, to curtains and electronics. She is looking at several units, and the median price is $89,000, plus $850 a month lot rent, plus utilities. We kids will be helping her with the rent and utilities.",
+        },
+      ];
 
-    const expectation = [
-      {
-        'id': 1,
-        'name': 'bessie',
-        'coolfactor': 3,
-        'owner_id': 1
-      },
-      {
-        'id': 2,
-        'name': 'jumpy',
-        'coolfactor': 4,
-        'owner_id': 1
-      },
-      {
-        'id': 3,
-        'name': 'spot',
-        'coolfactor': 10,
-        'owner_id': 1
-      }
-    ];
+      const data = await fakeRequest(app)
+        .get('/campaigns')
+        .expect('Content-Type', /json/)
+        .expect(200);
 
-    const data = await fakeRequest(app)
-      .get('/animals')
-      .expect('Content-Type', /json/)
-      .expect(200);
-
-    expect(data.body).toEqual(expectation);
+      expect(data.body).toEqual(expectation);
+    });
   });
 });
