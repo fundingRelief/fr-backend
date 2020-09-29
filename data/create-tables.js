@@ -16,10 +16,11 @@ async function run() {
                     campaign_name VARCHAR(512) NOT NULL,
                     current_amount VARCHAR(512) NOT NULL,
                     goal VARCHAR(512) NOT NULL,
+                    percentage VARCHAR(512)
                     donors INTEGER NOT NULL,
-                    img_url VARCHAR(600),
-                    link_url VARCHAR(600),
-                    description VARCHAR(256)
+                    img_url VARCHAR(600) NOT NULL,
+                    link_url VARCHAR(600) NOT NULL,
+                    description VARCHAR(256) NOT NULL
             );
         `);
 
