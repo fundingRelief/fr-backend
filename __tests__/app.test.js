@@ -25,10 +25,11 @@ describe('app routes', () => {
         {
           id: 1,
           campaign_name: 'Our parents lost their home to the Almeda fire',
-          current_amount: '$944',
-          goal: '$5000',
-          percentage: '18.8%',
+          current_amount: 944,
+          goal: 5000,
+          percentage: 18.8,
           donors: 18,
+          location: 'PORTLAND, OR',
           img_url:
             'https://d2g8igdw686xgo.cloudfront.net/51544330_1601348243982129_r.jpeg',
           link_url: 'https://gf.me/u/y2z2h8',
@@ -38,10 +39,11 @@ describe('app routes', () => {
         {
           id: 2,
           campaign_name: 'Almeda Fire Relief - Sandy Wright needs a home',
-          current_amount: '$3,750',
-          goal: '$89,000',
-          percentage: '4.2%',
+          current_amount: 3750,
+          goal: 89000,
+          percentage: 4.2,
           donors: 22,
+          location: 'PORTLAND, OR',
           img_url:
             'https://d2g8igdw686xgo.cloudfront.net/51217170_1600121890775493_r.jpeg',
           link_url: 'https://gf.me/u/yy2gjz',
