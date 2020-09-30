@@ -11,7 +11,7 @@ async function run() {
                     campaign_name VARCHAR(512) NOT NULL,
                     current_amount INTEGER NOT NULL,
                     goal INTEGER NOT NULL,
-                    percentage INTEGER NOT NULL,
+                    percentage FLOAT NOT NULL,
                     donors INTEGER NOT NULL,
                     location VARCHAR(512),
                     img_url VARCHAR(600) NOT NULL,
