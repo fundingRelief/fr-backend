@@ -25,10 +25,11 @@ describe('app routes', () => {
         {
           id: 1,
           campaign_name: 'Our parents lost their home to the Almeda fire',
-          current_amount: '$944',
-          goal: '$5000',
-          percentage: '18.8%',
+          current_amount: 944,
+          goal: 5000,
+          percentage: 18.8,
           donors: 18,
+          location: 'PORTLAND, OR',
           img_url:
             'https://d2g8igdw686xgo.cloudfront.net/51544330_1601348243982129_r.jpeg',
           link_url: 'https://gf.me/u/y2z2h8',
@@ -38,15 +39,16 @@ describe('app routes', () => {
         {
           id: 2,
           campaign_name: 'Almeda Fire Relief - Sandy Wright needs a home',
-          current_amount: '$3,750',
-          goal: '$89,000',
-          percentage: '4.2%',
+          current_amount: 3750,
+          goal: 89000,
+          percentage: 4.2,
           donors: 22,
+          location: 'PORTLAND, OR',
           img_url:
             'https://d2g8igdw686xgo.cloudfront.net/51217170_1600121890775493_r.jpeg',
           link_url: 'https://gf.me/u/yy2gjz',
           description:
-            "On September 8th, 2020, my mother, Sandy Wright, lost her home and all of its contents in the Almeda Fire in Phoenix, Oregon. She was a resident of Bear Lake Estates 55+ Mobile Home Park, moving there after the death of my father in 2015. Mom fled from her home of four years with only the clothes she was wearing, her dogs, her medications, and her car.  We, her children, grandchildren, and friends, are asking for your help to get Mom into a new housing situation.  Sandy is a widow living on Social Security benefits and a very small pension from her late husband. Much of her income goes toward her medical insurance, medications and housing costs. Sandy cannot afford to buy a new, or even used, mobile home on her own, let alone furnish it. The insurance company found a way to not pay.  Everything from the life she shared with her late husband, retired Medford  Police Detective Bob Wright, has burned, including his service uniform and funeral flag.  Sandy also lost her mother's  and grandmother's diaries and recipes, her mother's wedding dress and family photos dating back over 100 years.  She is currently staying with her daughter and son-in-law near Seattle until a housing solution can be found. Sandy's children and grandchildren are doing everything that they can to help her financially. Although it's a good start, it will not be enough. Sandy is looking to buy an inexpensive, smaller mobile home trailer either in a safe park or on a small lot. Sandy will need to furnish it completely, from beds and linens, to dishes and glasses, to curtains and electronics. She is looking at several units, and the median price is $89,000, plus $850 a month lot rent, plus utilities. We kids will be helping her with the rent and utilities.",
+            "On September 8th, 2020, my mother, Sandy Wright, lost her home and all of its contents in the Almeda Fire in Phoenix, Oregon. She was a resident of Bear Lake Estates 55+ Mobile Home Park, moving there after the death of my father in 2015. Mom fled from her home of four years with only the clothes she was wearing, her dogs, her medications, and her car.  We, her children, grandchildren, and friends, are asking for your help to get Mom into a new housing situation.  Sandy is a widow living on Social Security benefits and a very small pension from her late husband. Much of her income goes toward her medical insurance, medications and housing costs. Sandy cannot afford to buy a new, or even used, mobile home on her own, let alone furnish it. The insurance company found a way to not pay.  Everything from the life she shared with her late husband, retired Medford Police Detective Bob Wright, has burned, including his service uniform and funeral flag.  Sandy also lost her mother's  and grandmother's diaries and recipes, her mother's wedding dress and family photos dating back over 100 years.  She is currently staying with her daughter and son-in-law near Seattle until a housing solution can be found. Sandy's children and grandchildren are doing everything that they can to help her financially. Although it's a good start, it will not be enough. Sandy is looking to buy an inexpensive, smaller mobile home trailer either in a safe park or on a small lot. Sandy will need to furnish it completely, from beds and linens, to dishes and glasses, to curtains and electronics. She is looking at several units, and the median price is $89,000, plus $850 a month lot rent, plus utilities. We kids will be helping her with the rent and utilities.",
         },
       ];
 

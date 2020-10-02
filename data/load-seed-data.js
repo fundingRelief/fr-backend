@@ -11,8 +11,8 @@ async function run() {
       data.map((campaign) => {
         return client.query(
           `
-                    INSERT INTO campaigns (campaign_name, current_amount, goal, percentage, donors, img_url, link_url, description)
-                    VALUES ($1, $2, $3, $4, $5, $6, $7, $8);
+                    INSERT INTO campaigns (campaign_name, current_amount, goal, percentage, donors, location, img_url, link_url, description)
+                    VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9);
                 `,
           [
             campaign.campaign_name,
@@ -20,6 +20,7 @@ async function run() {
             campaign.goal,
             campaign.percentage,
             campaign.donors,
+            campaign.location,
             campaign.img_url,
             campaign.link_url,
             campaign.description,
