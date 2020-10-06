@@ -1,35 +1,9 @@
 const client = require('../lib/client');
 // const data = require('./data.json');
-// const data = [];
 
 const { scrapeThing } = require('../lib/goFundMeScrape/gfmData');
 
-// scrapeThing();
-// console.log(scrapeThing());
-
-// (async () => {
-//   console.log(await scrapeThing());
-// })();
-
-// const whatever = () => {
-//   (async () => {
-//     await scrapeThing();
-//   })();
-// };
-
-// const data = scrapeThing().then((value) => value);
-
-// whatever();
-
-// const data = whatever();
-// console.log(data);
-
 run();
-
-//https://www.gofundme.com/c/act/northern-california-fires
-//https://www.gofundme.com/c/act/southern-california-fires
-//https://www.gofundme.com/c/act/central-california-fires
-//https://www.gofundme.com/c/act/washington-fires
 
 async function run() {
   try {
