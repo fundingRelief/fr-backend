@@ -1,7 +1,7 @@
 const client = require('../lib/client');
 const data = require('./data.json');
-const gfmData = require('../lib/goFundMeScrape/gfmData');
-const gfmActualData = require('../lib/goFundMeScrape/gfmData');
+
+const { everythingObjectArr } = require('../lib/goFundMeScrape/gfmData');
 
 run();
 
