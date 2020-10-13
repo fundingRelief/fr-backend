@@ -6,7 +6,7 @@ async function run() {
   try {
     await client.connect();
     await client.query(`       
-                CREATE TABLE campaigns (
+                CREATE TABLE campaigns_oregon (
                     id SERIAL PRIMARY KEY NOT NULL,
                     campaign_name VARCHAR(512) NOT NULL,
                     current_amount INTEGER NOT NULL,
@@ -15,7 +15,7 @@ async function run() {
                     location VARCHAR(512),
                     img_url VARCHAR(600) NOT NULL,
                     link_url VARCHAR(600) NOT NULL,
-                    description VARCHAR(2048) NOT NULL,
+                    description VARCHAR(16384),
                     last_donation VARCHAR(512),
                     cause VARCHAR(512)
             );

@@ -7,7 +7,7 @@ async function run() {
     await client.connect();
 
     await client.query(`
-            DROP TABLE IF EXISTS campaigns;
+            DROP TABLE IF EXISTS campaigns_oregon;
         `);
 
     console.log(' drop tables complete');
