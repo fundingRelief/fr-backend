@@ -19,7 +19,7 @@ async function run() {
                     last_donation VARCHAR(512),
                     cause VARCHAR(512)
             );
-            ALTER SEQUENCE campaigns_oregon_id_seq RESTART WITH 2000;
+            ALTER SEQUENCE campaigns_no_cal_id_seq RESTART WITH 2000;
         `);
 
     console.log('create tables complete');
