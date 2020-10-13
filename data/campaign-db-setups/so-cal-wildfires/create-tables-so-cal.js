@@ -21,7 +21,6 @@ async function run() {
             );
             ALTER SEQUENCE campaigns_so_cal_id_seq RESTART WITH 3000;
         `);
-
     console.log('create tables complete');
   } catch (err) {
     console.log(err);
