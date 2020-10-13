@@ -19,6 +19,7 @@ async function run() {
                     last_donation VARCHAR(512),
                     cause VARCHAR(512)
             );
+            ALTER SEQUENCE campaigns_washington_id_seq RESTART WITH 5000;
         `);
 
     console.log('create tables complete');
