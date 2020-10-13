@@ -1,7 +1,7 @@
-const client = require('../lib/client');
+const client = require('../../../lib/client');
 // const data = require('./data.json');
 
-const { scrapeThing } = require('../lib/goFundMeScrape/gfmData');
+const { scrapeThing } = require('../../../lib/goFundMeScrape/gfmData');
 
 run();
 

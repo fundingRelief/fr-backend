@@ -10,13 +10,35 @@
     "start:watch": "nodemon server.js",
     "lint": "eslint .",
 
-    "create-tables-oregon": "node data/create-tables-oregon.js",
-    "drop-tables-oregon": "node data/drop-tables-oregon.js",
-    "load-seed-data-oregon": "node data/load-seed-data-oregon.js",
-
+    "create-tables-oregon": "node data/campaign-db-setups/oregon-wildfires/create-tables-oregon.js",
+    "drop-tables-oregon": "node data/campaign-db-setups/oregon-wildfires/drop-tables-oregon.js",
+    "load-seed-data-oregon": "node data/campaign-db-setups/oregon-wildfires/load-seed-data-oregon.js",
     "recreate-tables-oregon": "npm run drop-tables-oregon && npm run create-tables-oregon",
-
     "setup-db-oregon": "npm run recreate-tables-oregon && npm run load-seed-data-oregon",
+
+    "create-tables-no-cal": "node data/campaign-db-setups/no-cal-wildfires/create-tables-no-cal.js",
+    "drop-tables-no-cal": "node data/campaign-db-setups/no-cal-wildfires/drop-tables-no-cal.js",
+    "load-seed-data-no-cal": "node data/campaign-db-setups/no-cal-wildfires/load-seed-data-no-cal.js",
+    "recreate-tables-no-cal": "npm run drop-tables-no-cal && npm run create-tables-no-cal",
+    "setup-db-no-cal": "npm run recreate-tables-no-cal && npm run load-seed-data-no-cal",
+
+    "create-tables-so-cal": "node data/campaign-db-setups/so-cal-wildfires/create-tables-so-cal.js",
+    "drop-tables-so-cal": "node data/campaign-db-setups/so-cal-wildfires/drop-tables-so-cal.js",
+    "load-seed-data-so-cal": "node data/campaign-db-setups/so-cal-wildfires/load-seed-data-so-cal.js",
+    "recreate-tables-so-cal": "npm run drop-tables-so-cal && npm run create-tables-so-cal",
+    "setup-db-so-cal": "npm run recreate-tables-so-cal && npm run load-seed-data-so-cal",
+
+    "create-tables-central-cal": "node data/campaign-db-setups/central-cal-wildfires/create-tables-central-cal.js",
+    "drop-tables-central-cal": "node data/campaign-db-setups/central-cal-wildfires/drop-tables-central-cal.js",
+    "load-seed-data-central-cal": "node data/campaign-db-setups/central-cal-wildfires/load-seed-data-central-cal.js",
+    "recreate-tables-central-cal": "npm run drop-tables-central-cal && npm run create-tables-central-cal",
+    "setup-db-central-cal": "npm run recreate-tables-central-cal && npm run load-seed-data-central-cal",
+
+    "create-tables-washington": "node data/campaign-db-setups/washington-wildfires/create-tables-washington.js",
+    "drop-tables-washington": "node data/campaign-db-setups/washington-wildfires/drop-tables-washington.js",
+    "load-seed-data-washington": "node data/campaign-db-setups/washington-wildfires/load-seed-data-washington.js",
+    "recreate-tables-washington": "npm run drop-tables-washington && npm run create-tables-washington",
+    "setup-db-washington": "npm run recreate-tables-washington && npm run load-seed-data-washington",
 
     "setup-db:prod": "heroku run npm run setup-db",
     "setup-heroku": "heroku addons:create heroku-postgresql:hobby-dev && heroku config:set PGSSLMODE=require && heroku config:get DATABASE_URL"

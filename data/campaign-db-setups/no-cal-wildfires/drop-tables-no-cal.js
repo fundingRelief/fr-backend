@@ -1,4 +1,4 @@
-const client = require('../lib/client');
+const client = require('../../../lib/client');
 
 run();
 
@@ -7,7 +7,7 @@ async function run() {
     await client.connect();
 
     await client.query(`
-            DROP TABLE IF EXISTS campaigns_oregon;
+            DROP TABLE IF EXISTS campaigns_no_cal;
         `);
 
     console.log(' drop tables complete');

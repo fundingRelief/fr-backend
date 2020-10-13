@@ -1,4 +1,4 @@
-const client = require('../lib/client');
+const client = require('../../../lib/client');
 
 run();
 
@@ -6,7 +6,7 @@ async function run() {
   try {
     await client.connect();
     await client.query(`       
-                CREATE TABLE campaigns_oregon (
+                CREATE TABLE campaigns_washington (
                     id SERIAL PRIMARY KEY NOT NULL,
                     campaign_name VARCHAR(512) NOT NULL,
                     current_amount INTEGER NOT NULL,
