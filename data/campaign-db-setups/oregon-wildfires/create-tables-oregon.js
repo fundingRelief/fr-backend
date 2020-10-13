@@ -20,8 +20,6 @@ async function run() {
                     cause VARCHAR(512)
             );
             ALTER SEQUENCE campaigns_oregon_id_seq RESTART WITH 1000;
-
-            
         `);
 
     console.log('create tables complete');
