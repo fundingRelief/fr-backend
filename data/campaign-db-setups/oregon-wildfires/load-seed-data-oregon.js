@@ -10,7 +10,7 @@ async function run() {
     );
 
     await client.connect();
-    // console.log(data);
+    console.log('pushing into db');
 
     await Promise.all(
       data.map((campaign) => {
