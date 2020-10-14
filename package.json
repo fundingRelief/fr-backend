@@ -40,6 +40,8 @@
     "recreate-tables-washington": "npm run drop-tables-washington && npm run create-tables-washington",
     "setup-db-washington": "npm run recreate-tables-washington && npm run load-seed-data-washington",
 
+    "setup-db": "npm run recreate-tables-oregon && npm run load-seed-data-oregon && npm run recreate-tables-no-cal && npm run load-seed-data-no-cal && npm run recreate-tables-so-cal && npm run load-seed-data-so-cal && npm run recreate-tables-central-cal && npm run load-seed-data-central-cal && npm run recreate-tables-washington && npm run load-seed-data-washington",
+
     "setup-db:prod": "heroku run npm run setup-db",
     "setup-heroku": "heroku addons:create heroku-postgresql:hobby-dev && heroku config:set PGSSLMODE=require && heroku config:get DATABASE_URL"
   },
